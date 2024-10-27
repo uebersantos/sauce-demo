@@ -9,8 +9,8 @@ describe('Finalizar compra', () => {
         // Quando insiro o usuário e a senha válidos
         cy.session('login', () => {
             LoginPage.visit();
-            LoginPage.enterUsername('standard_user');
-            LoginPage.enterPassword('secret_sauce');
+            LoginPage.enterUsername('standard_user', { log: false });
+            LoginPage.enterPassword('secret_sauce', { log: false });
             LoginPage.submitLogin();
             LoginPage.checkLoginSuccessful();
         });
