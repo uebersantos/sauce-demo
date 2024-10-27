@@ -18,7 +18,7 @@ describe('Adicionar produtos ao carrinho', () => {
         cy.visit('https://www.saucedemo.com/v1/inventory.html');
     });
 
-    it('Deve verificar que o carrinho está vazio', () => {
+    it('CT-014	Verificar que o carrinho está vazio', () => {
         
         // Quando acesso o carrinho sem adicionar itens
         AddToCartPage.openCart();
@@ -32,7 +32,7 @@ describe('Adicionar produtos ao carrinho', () => {
     });
 
 
-    it('Deve adicionar um item ao carrinho', () => {
+    it('CT-015	Adicionar um item ao carrinho', () => {
         // Quando adiciono o primeiro item ao carrinho
         AddToCartPage.addItemToCart(0);
 
@@ -45,7 +45,7 @@ describe('Adicionar produtos ao carrinho', () => {
         AddToCartPage.verifyItemInCart('Sauce Labs Backpack', '29.99');
     });
 
-    it('Deve adicionar dois itens ao carrinho', () => {
+    it('CT-016	Adicionar dois itens ao carrinho', () => {
         // Quando adiciono o primeiro item ao carrinho
         AddToCartPage.addItemToCart(0);
         AddToCartPage.verifyCartBadge('1');

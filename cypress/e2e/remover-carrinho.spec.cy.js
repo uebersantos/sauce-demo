@@ -19,7 +19,7 @@ describe('Remover do Carrinho', () => {
         cy.visit('https://www.saucedemo.com/v1/inventory.html');
     });
 
-    it('Deve remover um item do carrinho', () => {
+    it('CT-017	Remover um item do carrinho', () => {
         // Quando adiciono o primeiro item ao carrinho
         AddToCartPage.addItemToCart(0);
 

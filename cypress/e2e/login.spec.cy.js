@@ -1,13 +1,13 @@
 import LoginPage from '../pages/LoginPage';
 
-describe('Funcionalidade de Login na SauceDemo', () => {
+describe('Login', () => {
 
     beforeEach(() => {
         // Dado que estou na página de login
         LoginPage.visit();
     });
 
-    it('Deve permitir login com credenciais válidas', () => {
+    it('CT-001	Login com credenciais válidas', () => {
         // Quando insiro o usuário e a senha válidos
         LoginPage.enterUsername('standard_user');
         LoginPage.enterPassword('secret_sauce');
@@ -17,7 +17,7 @@ describe('Funcionalidade de Login na SauceDemo', () => {
         LoginPage.checkLoginSuccessful();
     });
 
-    it('Deve exibir mensagem de erro ao tentar login com senha inválida', () => {
+    it('CT-002	Login com usuário válido e senha inválida', () => {
         // Quando insiro o usuário correto e uma senha inválida
         LoginPage.enterUsername('standard_user');
         LoginPage.enterPassword('senhaInvalida');
@@ -29,7 +29,7 @@ describe('Funcionalidade de Login na SauceDemo', () => {
         LoginPage.checkErrorMessageVisible();
     });
 
-    it('Deve exibir mensagem de erro ao tentar login com usuário inválido', () => {
+    it('CT-003	Login com usuário inválido e senha válida', () => {
         // Quando insiro um usuário inválido e uma senha válida
         LoginPage.enterUsername('usuarioInvalido');
         LoginPage.enterPassword('secret_sauce');
@@ -41,7 +41,7 @@ describe('Funcionalidade de Login na SauceDemo', () => {
         LoginPage.checkErrorMessageVisible();
     });
 
-    it('Deve exibir mensagem de erro ao tentar login com credenciais inválidas', () => {
+    it('CT-004	Login com usuário e senha inválidos', () => {
         // Quando insiro usuário e senha inválidos
         LoginPage.enterUsername('usuarioInvalido');
         LoginPage.enterPassword('senhaInvalida');
@@ -53,7 +53,7 @@ describe('Funcionalidade de Login na SauceDemo', () => {
         LoginPage.checkErrorMessageVisible();
     });
 
-    it('Deve exibir mensagem de erro ao tentar login sem preencher credenciais', () => {
+    it('CT-005	Tentativa de login sem preencher as credenciais', () => {
         // Quando deixo os campos de usuário e senha em branco
         LoginPage.submitLogin();
         LoginPage.checkErrorText("Epic sadface: Username is required");
@@ -63,7 +63,7 @@ describe('Funcionalidade de Login na SauceDemo', () => {
         LoginPage.checkErrorMessageVisible();
     });
 
-    it('Deve exibir mensagem de erro ao tentar login com usuário bloqueado', () => {
+    it('CT-006	Tentativa de login com usuário bloqueado', () => {
         // Quando insiro um usuário bloqueado e uma senha válida
         LoginPage.enterUsername('locked_out_user');
         LoginPage.enterPassword('secret_sauce');
