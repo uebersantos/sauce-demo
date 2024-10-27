@@ -10,7 +10,7 @@ describe('Login', () => {
     it('CT-001	Login com credenciais válidas', () => {
         // Quando insiro o usuário e a senha válidos
         LoginPage.enterUsername('standard_user');
-        LoginPage.enterPassword('secret_sauce');
+        LoginPage.enterPassword('secret_sauce', { log: false });
         LoginPage.submitLogin();
 
         // Então devo ser redirecionado para a página de inventário
