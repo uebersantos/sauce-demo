@@ -26,7 +26,7 @@ describe('Finalizar compra', () => {
         AddToCartPage.openCart();
     });
 
-    it('Deve exibir erro "First Name is required" ao tentar finalizar compra sem preencher nome', () => {
+    it('CT-018	Exibir erro "First Name is required" ao tentar finalizar compra sem preencher o nome', () => {
         // Quando inicio o checkout
         CheckoutPage.startCheckout();
 
@@ -37,7 +37,7 @@ describe('Finalizar compra', () => {
         CheckoutPage.verifyErrorVisible("First Name is required");
     });
 
-    it('Deve exibir erro "Last Name is required" ao tentar finalizar compra sem preencher sobrenome', () => {
+    it('CT-019	Exibir erro "Last Name is required" ao tentar finalizar compra sem preencher o sobrenome', () => {
         // Quando inicio o checkout
         CheckoutPage.startCheckout();
 
@@ -49,7 +49,7 @@ describe('Finalizar compra', () => {
         CheckoutPage.verifyErrorVisible("Last Name is required");
     });
 
-    it('Deve exibir erro "Postal Code is required" ao tentar finalizar compra sem preencher código postal', () => {
+    it('CT-020	Exibir erro "Postal Code is required" ao tentar finalizar compra sem preencher o código postal', () => {
         // Quando inicio o checkout
         CheckoutPage.startCheckout();
 
@@ -61,7 +61,7 @@ describe('Finalizar compra', () => {
         CheckoutPage.verifyErrorVisible("Postal Code is required");
     });
 
-    it('Deve finalizar compra com sucesso', () => {
+    it('CT-021	Finalizar compra com sucesso', () => {
         // Quando inicio o checkout
         CheckoutPage.startCheckout();
 

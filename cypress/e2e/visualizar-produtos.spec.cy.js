@@ -1,7 +1,7 @@
 import LoginPage from '../pages/LoginPage';
 import ProductPage from '../pages/ProductPage';
 
-describe('Visualizar produtos na SauceDemo', () => {
+describe('Visualização de Produtos', () => {
 
     beforeEach(() => {
         // Dado que estou na página de login
@@ -18,7 +18,7 @@ describe('Visualizar produtos na SauceDemo', () => {
         cy.visit('https://www.saucedemo.com/v1/inventory.html');
     });
        
-    it('Deve visualizar o nome de todos os produtos na lista', () => {
+    it('CT-007	Visualizar nome de todos os produtos na lista', () => {
         const products = [
             { name: 'Sauce Labs Backpack' },
             { name: 'Sauce Labs Bike Light' },
@@ -34,7 +34,7 @@ describe('Visualizar produtos na SauceDemo', () => {
         });
     });
 
-    it('Deve visualizar os detalhes do produto Sauce Labs Backpack', () => {
+    it('CT-008	Visualizar detalhes do produto Sauce Labs Backpack', () => {
         const product = {
             name: 'Sauce Labs Backpack',
             image: './img/sauce-backpack-1200x1500.jpg',
@@ -47,7 +47,7 @@ describe('Visualizar produtos na SauceDemo', () => {
         ProductPage.viewProductDetails(product.name, product.image, product.price, product.desc);
     });
 
-    it('Deve visualizar os detalhes do produto Sauce Labs Bike Light', () => {
+    it('CT-009	Visualizar detalhes do produto Sauce Labs Bike Light', () => {
         const product = {
             name: 'Sauce Labs Bike Light',
             image: './img/bike-light-1200x1500.jpg',
@@ -60,7 +60,7 @@ describe('Visualizar produtos na SauceDemo', () => {
         ProductPage.viewProductDetails(product.name, product.image, product.price, product.desc);
     });
 
-    it('Deve visualizar os detalhes do produto Sauce Labs Bolt T-Shirt', () => {
+    it('CT-010	Visualizar detalhes do produto Sauce Labs Bolt T-Shirt', () => {
         const product = {
             name: 'Sauce Labs Bolt T-Shirt',
             image: './img/bolt-shirt-1200x1500.jpg',
@@ -73,7 +73,7 @@ describe('Visualizar produtos na SauceDemo', () => {
         ProductPage.viewProductDetails(product.name, product.image, product.price, product.desc);
     });
 
-    it('Deve visualizar os detalhes do produto Sauce Labs Fleece Jacket', () => {
+    it('CT-011	Visualizar detalhes do produto Sauce Labs Fleece Jacket', () => {
         const product = {
             name: 'Sauce Labs Fleece Jacket',
             image: './img/sauce-pullover-1200x1500.jpg',
@@ -86,7 +86,7 @@ describe('Visualizar produtos na SauceDemo', () => {
         ProductPage.viewProductDetails(product.name, product.image, product.price, product.desc);
     });
 
-    it('Deve visualizar os detalhes do produto Sauce Labs Onesie', () => {
+    it('CT-012	Visualizar detalhes do produto Sauce Labs Onesie', () => {
         const product = {
             name: 'Sauce Labs Onesie',
             image: './img/red-onesie-1200x1500.jpg',
@@ -99,7 +99,7 @@ describe('Visualizar produtos na SauceDemo', () => {
         ProductPage.viewProductDetails(product.name, product.image, product.price, product.desc);
     });
 
-    it('Deve visualizar os detalhes do produto Test.allTheThings() T-Shirt (Red)', () => {
+    it('CT-013	Visualizar detalhes do produto Test.allTheThings() T-Shirt (Red)', () => {
         const product = {
             name: 'Test.allTheThings() T-Shirt (Red)',
             image: './img/red-tatt-1200x1500.jpg',
