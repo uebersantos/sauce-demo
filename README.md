@@ -1,6 +1,6 @@
-# Desafio VOX
+# Sauce Demo
 
-Projeto desenvolvido para desafio técnico.
+Projeto desenvolvido realização de teste automatizado na Sauce Demo.
 
 ## Pré-requisitos
 
