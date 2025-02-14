@@ -22,7 +22,7 @@ describe('Login', () => {
         LoginPage.enterUsername('standard_user');
         LoginPage.enterPassword('senhaInvalida');
         LoginPage.submitLogin();
-        LoginPage.checkErrorText("00");
+        LoginPage.checkErrorText("Epic sadface: Username and password do not match any user in this service");
 
 
         // Então uma mensagem de erro deve ser exibida
