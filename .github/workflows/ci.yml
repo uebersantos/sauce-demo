@@ -17,11 +17,3 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-
-# Adiciona esta etapa para salvar as screenshots caso algum teste falhe
-      - name: Upload Cypress Screenshots
-        uses: actions/upload-artifact@v3
-        if: failure()  # Apenas se os testes falharem
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots/
