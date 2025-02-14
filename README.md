@@ -1,4 +1,4 @@
-# Sauce Demo
+# Sauce Demo Teste
 
 Projeto desenvolvido realização de teste automatizado na Sauce Demo.
 
